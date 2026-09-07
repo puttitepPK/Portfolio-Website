@@ -5,7 +5,9 @@ export default function Skills() {
     <div className="tech-toolkit mx-auto mt-16 max-w-[1480px] border-t border-white/10 pt-12">
       <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
         <div>
-          <h2 className="section-heading font-display text-4xl leading-none tracking-[-.05em] md:text-5xl"><span className="section-heading__index">02</span><span className="section-heading__label">ทักษะด้านเทคนิค</span></h2>
+          {/* <p className="about-skills-title__index">02 / TOOLKIT</p> */}
+          <p className="project-showcase__kicker"><span />02 / TOOLKIT</p>
+          <h2 className="about-skills-title">ทักษะด้าน<em>เทคนิค</em></h2>
         </div>
         <p className="max-w-md text-sm leading-relaxed text-white/60">ทักษะที่ได้จากการเรียนในมหาวิทยาลัย การทำงานเป็นทีม การทำโปรเจกต์ด้วยตัวเอง และประสบการณ์จากการเป็นผู้ช่วยสอน</p>
       </div>
