@@ -53,7 +53,11 @@ export default function Hero({ navigate }) {
       <div className="hero-content relative z-10 mx-auto flex w-full max-w-[1480px] flex-col justify-end">
         <p className="mb-5 font-mono text-[11px] uppercase tracking-[.22em] text-cyan-200/70">Portfolio · COMPUTER SCIENCE STUDENT</p>
         <div className="hero-title-layout">
-          <h1 className="hero-title"><span className="hero-title__primary">เปลี่ยนไอเดีย</span><span className="hero-title__accent">ให้กลายเป็น<br />ซอฟต์แวร์ที่ใช้งานได้จริง</span></h1>
+          <h1 className="hero-title">
+            <span className="hero-title__primary">เปลี่ยนไอเดีย</span>
+            <span className="hero-title__connector">ให้กลายเป็น</span>
+            <span className="hero-title__accent">ซอฟต์แวร์ที่ใช้งานได้จริง</span>
+          </h1>
           <div className="hero-portrait-frame">
             <div className="hero-portrait" aria-hidden="true">
               <div className="hero-portrait__grid" />

@@ -1,4 +1,4 @@
-import { education1, education2, languages } from "../data";
+import { education1, education2, languages, profile } from "../data";
 import Skills from "./Skills";
 
 export default function About() {
@@ -15,6 +15,9 @@ export default function About() {
       <article className="about-profile-card">
         <div className="about-profile-card__copy">
           <p className="about-profile-card__label">PROFILE / 2026</p>
+          <h3 className="about-profile-card__name">
+            {profile.nameTh.split(" ")[0]} <em>{profile.nameTh.split(" ").slice(1).join(" ")}</em>
+          </h3>
           <div className="about-profile-card__text">
             <p>
               นักศึกษาวิทยาการคอมพิวเตอร์ชั้นปีที่ 4
