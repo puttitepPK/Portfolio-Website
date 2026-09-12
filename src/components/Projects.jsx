@@ -3,7 +3,7 @@ import { featuredProject, projects } from "../data";
 
 const caseStudies = [
   { ...projects[0], code: "01", accent: "cyan", images: ["/App SmartMain.png", "/App Smart1.png", "/App Smart2.png", "/App Smart3.png"] },
-  { ...projects[1], code: "02", accent: "violet", images: ["/HomeyPets Presentation (1).jpg", "/HomeyPets Presentation (2).jpg", "/HomeyPets Presentation (3).jpg", "/HomeyPets Main.png"] },
+  { ...projects[1], code: "02", accent: "violet", images: ["/HomeyPets Main.png", "/HomeyPets Presentation (1).jpg", "/HomeyPets Presentation (2).jpg", "/HomeyPets Presentation (3).jpg", "/HomeyPets Presentation (4).jpg", "/HomeyPets Presentation (5).jpg", "/HomeyPets Presentation (6).jpg", "/HomeyPets Presentation (7).jpg"] },
   { ...featuredProject, code: "03", accent: "lime", images: ["/HomeyChatBot (1).jpg", "/HomeyChatBot (2).jpg", "/HomeyChatBot (3).jpg", "/HomeyChatBot App (1).png", "/HomeyChatBot App (2).png", "/HomeyChatBot App (3).png"] },
   { ...projects[2], code: "04", accent: "amber", images: ["/GameProMax1.png", "/GamePromax Presentation.jpg", "/GameProMax2.png", "/GameProMax3.png", "/GameProMax4.png", "/GameProMax5.png", "/GameProMax6.png", "/GameProMax7.png"] },
   { ...projects[3], code: "05", accent: "rose", images: ["/Khositniwat Main.png", "/Khositniwat App.png"] },
