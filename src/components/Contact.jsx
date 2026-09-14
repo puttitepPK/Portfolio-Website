@@ -22,7 +22,7 @@ export default function Contact() {
             <span className="contact-terminal__resume-label">RESUME / THAI VERSION</span>
             <h3>Resume ฉบับภาษาไทย พร้อมรายละเอียดครบทุกด้าน</h3>
           </div>
-          <a className="contact-terminal__resume-button" href="/ไทย Resume.pdf" download="ไทย Resume.pdf">
+          <a className="contact-terminal__resume-button" href="/Resume พุฒิเทพ แก้วเกษ.pdf" download="Resume พุฒิเทพ แก้วเกษ.pdf">
             <span className="contact-terminal__resume-button-label">DOWNLOAD RESUME</span>
             <span className="contact-terminal__resume-button-file">PDF / TH</span>
           </a>
