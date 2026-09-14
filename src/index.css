@@ -632,6 +632,19 @@
   .project-showcase__intro > p:last-child { margin-top: 26px; }
   .project-stage { height: auto; padding: 0 16px 34px; }
   .project-stage__card { position: relative; top: auto; min-height: 0; padding: 22px; transform: translateY(18px) scale(.98); }
+  /* Keep the long Thai project dates out of the narrow right-hand column. */
+  .project-stage__head, .experience-stage__topline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .project-stage__period, .experience-stage__topline > span:last-child {
+    width: 100%;
+    color: rgba(224,242,254,.72);
+    font-size: 9px;
+    line-height: 1.45;
+    letter-spacing: .1em;
+  }
   .project-stage__grid, .experience-stage__grid { grid-template-columns: 1fr; gap: 28px; }
   .project-stage__grid { padding: 28px 0 23px; }
   .project-stage h3, .experience-stage h3 { font-size: clamp(2.1rem,10vw,3.7rem); }
