@@ -14,7 +14,7 @@ export default function About() {
       </div>
       <article className="about-profile-card">
         <div className="about-profile-card__copy">
-          <p className="about-profile-card__label">PROFILE / 2026</p>
+          <p className="about-profile-card__label">PROFILE / 2569</p>
           <h3 className="about-profile-card__name">
             {profile.nameTh.split(" ")[0]} <em>{profile.nameTh.split(" ").slice(1).join(" ")}</em>
           </h3>
