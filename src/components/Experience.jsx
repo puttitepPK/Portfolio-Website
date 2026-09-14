@@ -21,7 +21,7 @@ export default function Experience() {
     <section className="experience-showcase">
       <div className="experience-showcase__intro">
         <p className="project-showcase__kicker">
-          <span /> 04 / FIELD EXPERIENCE / 2025—2026
+          <span /> 04 / FIELD EXPERIENCE / 2568—2569
         </p>
         <h2>
           ประสบการณ์

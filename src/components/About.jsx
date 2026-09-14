@@ -46,7 +46,7 @@ export default function About() {
           <img src="/pk3.jpg" alt="Puttitep presenting a project" />
           <span className="about-profile-card__scan" aria-hidden="true" />
           <span className="about-profile-card__caption">
-            PROJECT PRESENTATION / 2026
+            PROJECT PRESENTATION / 2569
           </span>
         </div>
       </article>

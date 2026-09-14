@@ -180,7 +180,7 @@ export default function Projects() {
     <section className="project-showcase">
       <div className="project-showcase__intro">
         <p className="project-showcase__kicker">
-          <span /> 03 / SELECTED WORK / 2024—2026
+          <span /> 03 / SELECTED WORK / 2567—2569
         </p>
         <h2 className="project-title">
           <span>ผลงาน /</span>
