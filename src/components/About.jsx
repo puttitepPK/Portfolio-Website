@@ -88,7 +88,7 @@ export default function About() {
         </article>
         <article>
           <span>ที่อยู่</span>
-          <p>เขตบางเขน, กรุงเทพมหานคร, ประเทศไทย</p>
+          <p>เขตจตุจักร, กรุงเทพมหานคร, ประเทศไทย</p>
         </article>
         <article>
           <span>จุดที่สนใจ</span>
