@@ -64,6 +64,26 @@ const caseStudies = [
   // },
 ];
 
+const activities = [
+  {
+    code: "01",
+    accent: "cyan",
+    title: "AWS Academy & Tech Alliance 2026",
+    description:
+      "เข้าร่วมกิจกรรมเสริมความรู้และทักษะด้าน Cloud Computing, AI และ Digital Innovation ที่จัดโดยมหาวิทยาลัย",
+    images: ["/AWS1.jpg", "/AWS2.jpg", "/AWS3.jpg", "/AWS4.jpg"],
+    tags: ["Cloud Computing", "AI", "Digital Innovation"],
+  },
+  {
+    code: "02",
+    accent: "violet",
+    title: "Google Student Ambassador (GSA) รุ่นที่ 2",
+    description: "ผ่านและได้รับการคัดเลือกให้เป็น Google Student Ambassador รุ่นที่ 2",
+    images: ["/GSA1.jpg", "/GSA2.png"],
+    tags: ["Google Student Ambassador", "Achievement"],
+  },
+];
+
 function ProjectStage({ project }) {
   const stageRef = useRef(null);
   const [active, setActive] = useState(false);
@@ -175,6 +195,78 @@ function ProjectStage({ project }) {
   );
 }
 
+function ActivityStage({ activity }) {
+  const stageRef = useRef(null);
+  const [active, setActive] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(0);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setActive(entry.isIntersecting),
+      { threshold: 0.38 },
+    );
+    const stage = stageRef.current;
+    if (stage) observer.observe(stage);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <article
+      ref={stageRef}
+      className={`project-stage project-stage--${activity.accent} activity-stage ${active ? "is-active" : ""}`}
+      aria-label={activity.title}
+    >
+      <div className="project-stage__card">
+        <div className="project-stage__rail" aria-hidden="true"><span /></div>
+        <header className="project-stage__head">
+          <p className="project-stage__eyebrow">ACTIVITY / {activity.code}</p>
+          <p className="project-stage__period">2569</p>
+        </header>
+        <div className="project-stage__grid">
+          <div className="project-stage__copy">
+            <div>
+              <p className="project-stage__tag">ACTIVITY &amp; ACHIEVEMENT</p>
+              <h3><span className="project-stage__name-en">{activity.title}</span></h3>
+              <div className="project-stage__summary">
+                <p><span>รายละเอียด</span>{activity.description}</p>
+              </div>
+            </div>
+            <div className="project-stage__tech" aria-label="Activity topics">
+              {activity.tags.map((tag) => <span key={tag}>{tag}</span>)}
+            </div>
+          </div>
+          <div className="project-stage__media">
+            <div className="project-stage__screen">
+              <img src={activity.images[selectedImage]} alt={`${activity.title} — ภาพที่ ${selectedImage + 1}`} />
+              <span className="project-stage__scan" aria-hidden="true" />
+              <span className="project-stage__screen-label">ACTIVITY PHOTO / {String(selectedImage + 1).padStart(2, "0")}</span>
+            </div>
+            <div className="project-stage__thumbs" aria-label={`รูปภาพของ ${activity.title}`}>
+              {activity.images.map((image, index) => (
+                <button
+                  key={image}
+                  type="button"
+                  onClick={() => setSelectedImage(index)}
+                  className={selectedImage === index ? "is-selected" : ""}
+                  aria-label={`ดูภาพที่ ${index + 1}`}
+                  aria-pressed={selectedImage === index}
+                >
+                  <img src={image} alt="" />
+                  <i>{String(index + 1).padStart(2, "0")}</i>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+        <footer className="project-stage__footer">
+          <p><span>ภาพประกอบกิจกรรม</span>เลือกดูภาพกิจกรรมจากรายการภาพด้านบน</p>
+          <span className="project-stage__count">{String(activity.images.length).padStart(2, "0")} ภาพ</span>
+        </footer>
+      </div>
+    </article>
+  );
+}
+
 export default function Projects() {
   return (
     <section className="project-showcase">
@@ -202,6 +294,20 @@ export default function Projects() {
         {caseStudies.map((project) => (
           <ProjectStage key={project.code} project={project} />
         ))}
+      </div>
+      <div className="activity-showcase__intro">
+        <p className="project-showcase__kicker"><span /> 04 / ACTIVITIES &amp; ACHIEVEMENTS / 2569</p>
+        <h2 className="project-title">
+          <span>กิจกรรมและ</span>
+          <em>ความสำเร็จ</em>
+        </h2>
+        {/* <p>ประสบการณ์นอกห้องเรียนที่ช่วยต่อยอดความรู้ ทักษะ และการทำงานร่วมกับเครือข่ายด้านเทคโนโลยี</p> */}
+      </div>
+      <div className="project-showcase__marquee activity-showcase__marquee" aria-hidden="true">
+        <div>LEARN · CONNECT · GROW · ACHIEVE · LEARN · CONNECT · GROW · ACHIEVE ·</div>
+      </div>
+      <div className="project-showcase__stages activity-showcase__stages">
+        {activities.map((activity) => <ActivityStage key={activity.code} activity={activity} />)}
       </div>
     </section>
   );

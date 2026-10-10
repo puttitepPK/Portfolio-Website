@@ -4,7 +4,7 @@ import { profile } from "../data";
 const links = [
   { path: "/", label: "หน้าแรก" },
   { path: "/about", label: "แนะนำตัว" },
-  { path: "/projects", label: "ผลงาน" },
+  { path: "/projects", label: "ผลงาน/กิจกรรม" },
   { path: "/experience", label: "ประสบการณ์" },
 ];
 
