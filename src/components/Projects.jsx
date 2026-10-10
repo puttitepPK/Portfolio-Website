@@ -77,7 +77,8 @@ const activities = [
   {
     code: "02",
     accent: "violet",
-    title: "Google Student Ambassador (GSA) รุ่นที่ 2",
+    title: "Google Student Ambassador (GSA)",
+    cohort: "รุ่นที่ 2",
     description: "ผ่านและได้รับการคัดเลือกให้เป็น Google Student Ambassador รุ่นที่ 2",
     images: ["/GSA1.jpg", "/GSA2.png"],
     tags: ["Google Student Ambassador", "Achievement"],
@@ -214,7 +215,7 @@ function ActivityStage({ activity }) {
     <article
       ref={stageRef}
       className={`project-stage project-stage--${activity.accent} activity-stage ${active ? "is-active" : ""}`}
-      aria-label={activity.title}
+      aria-label={[activity.title, activity.cohort].filter(Boolean).join(" ")}
     >
       <div className="project-stage__card">
         <div className="project-stage__rail" aria-hidden="true"><span /></div>
@@ -226,7 +227,19 @@ function ActivityStage({ activity }) {
           <div className="project-stage__copy">
             <div>
               <p className="project-stage__tag">ACTIVITY &amp; ACHIEVEMENT</p>
-              <h3><span className="project-stage__name-en">{activity.title}</span></h3>
+              <h3>
+                <span className="project-stage__name-en">
+                  {activity.title}
+                  {activity.cohort && (
+                    <>
+                      {" "}
+                      <span className="activity-stage__cohort">
+                        {activity.cohort}
+                      </span>
+                    </>
+                  )}
+                </span>
+              </h3>
               <div className="project-stage__summary">
                 <p><span>รายละเอียด</span>{activity.description}</p>
               </div>
